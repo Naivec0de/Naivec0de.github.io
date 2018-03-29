@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111356487-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-111356487-1');
+
+    </script>
+    <title>VR View - example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <script>
+        function is_weixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        var isWeixin = is_weixin();
+        var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+
+        function loadHtml() {
+            var div = document.createElement('div');
+            div.id = 'weixin-tip';
+            div.innerHTML = '<p><img src="r/wechat_browser.png" width="100%" height="100%"alt="微信打开"/></p>';
+            document.body.appendChild(div);
+        }
+
+        function loadStyleText(cssText) {
+            var style = document.createElement('style');
+            style.rel = 'stylesheet';
+            style.type = 'text/css';
+            try {
+                style.appendChild(document.createTextNode(cssText));
+            } catch (e) {
+                style.styleSheet.cssText = cssText; //ie9以下
+            }
+            var head = document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+            head.appendChild(style);
+        }
+        var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,1); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+        if (isWeixin) {
+            loadHtml();
+            loadStyleText(cssText);
+        }
+
+    </script>
+    <header>
+        <h1 style="padding-top: 50px;">Demo</h1>
+    </header>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card">
+            <a href="../" class="w3-bar-item w3-button"><b></b>VAN360HUB</a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="#projects" class="w3-bar-item w3-button">Listings</a>
+                <a href="#about" class="w3-bar-item w3-button">About</a>
+                <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+            </div>
+        </div>
+    </div>
+    <div id="vrview"></div>
+    <p id="currently_viewing"></p>
+    <div id="info" class="container">
+        <div id="dp"></div>
+        <div id="descriptions" class="container">
+            <h3>Demo House: 11056 Some Rd, Delta, BC.</h3>
+            <p id="desc">This exceptional home boasts 958 sq ft of bright open living space</p>
+            <div id="demo" class="collapse">
+                <p id="more_desc">
+                    Dimensions:<br> Rooms
+                    <br> Agent Contact info<br>
+                </p>
+            </div>
+
+        </div>
+        <input id="btnToggle" type="button" data-toggle="collapse" data-target="#demo" onclick="toggle()" />
+    </div>
+    <div>
+        <p id=c_title>Outside</p>
+        <ul class="carousel">
+            <li>
+                <a href="#o1">
+        <img src="r/o1t.jpg" /> 
+        <small>Garage Door View</small></a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <p id=c_title>Basement Floor</p>
+        <ul class="carousel">
+            <li>
+                <a href="#b1">
+        <img src="r/b1t.jpg" /> 
+        <small>Basement #1</small></a>
+            </li>
+            <li>
+                <a href="#b2">
+        <img src="r/b2t.jpg" /> 
+        <small>Basement #2</small></a>
+            </li>
+            <li>
+                <a href="#b3">
+        <img src="r/b3t.jpg" /> 
+        <small>Basement #3</small></a>
+            </li>
+            <li>
+                <a href="#b4">
+        <img src="r/b4t.jpg" /> 
+        <small>Basement #4</small></a>
+            </li>
+            <li>
+                <a href="#b5">
+        <img src="r/b5t.jpg" /> 
+        <small>Basement #5</small></a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <p id=c_title>First Floor</p>
+        <ul class="carousel">
+            <li>
+                <a href="#f1">
+        <img src="r/f1t.jpg" /> 
+        <small>First floor #1</small></a>
+            </li>
+            <li>
+                <a href="#f2">
+        <img src="r/f2t.jpg" /> 
+        <small>First floor #2</small></a>
+            </li>
+            <li>
+                <a href="#f3">
+        <img src="r/f3t.jpg" /> 
+        <small>First floor #3</small></a>
+            </li>
+            <li>
+                <a href="#f4">
+        <img src="r/f4t.jpg" /> 
+        <small>First floor #4</small></a>
+            </li>
+            <li>
+                <a href="#f5">
+        <img src="r/f5t.jpg" /> 
+        <small>First floor #5</small></a>
+            </li>
+            <li>
+                <a href="#f6">
+        <img src="r/f6t.jpg" /> 
+        <small>First floor #6</small></a>
+            </li>
+            <li>
+                <a href="#f7">
+        <img src="r/f7t.jpg" /> 
+        <small>First floor #7</small></a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <p id=c_title>Second Floor</p>
+        <ul class="carousel">
+            <li>
+                <a href="#s1">
+        <img src="r/s1t.jpg" /> 
+        <small>Second Floor #1</small></a>
+            </li>
+            <li>
+                <a href="#s2">
+        <img src="r/s2t.jpg" /> 
+        <small>Second Floor #2</small></a>
+            </li>
+            <li>
+                <a href="#s3">
+        <img src="r/s3t.jpg" /> 
+        <small>Second Floor #3</small></a>
+            </li>
+            <li>
+                <a href="#s4">
+        <img src="r/s4t.jpg" /> 
+        <small>Second Floor #4</small></a>
+            </li>
+            <li>
+                <a href="#s5">
+        <img src="r/s5t.jpg" /> 
+        <small>Second Floor #5</small></a>
+            </li>
+            <li>
+                <a href="#s6">
+        <img src="r/s6t.jpg" /> 
+        <small>Second Floor #6</small></a>
+            </li>
+            <li>
+                <a href="#s7">
+        <img src="r/s7t.jpg" /> 
+        <small>Second Floor #7</small></a>
+            </li>
+            <li>
+                <a href="#s8">
+        <img src="r/s8t.jpg" /> 
+        <small>Second Floor #8</small></a>
+            </li>
+            <li>
+                <a href="#s9">
+        <img src="r/s9t.jpg" /> 
+        <small>Second Floor #9</small></a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Google Map -->
+    <div id="googleMap" class="w3-grayscale" style="width:100%;height:450px;"></div>
+    <!-- Add Google Maps -->
+    <script>
+        function myMap() {
+            myCenter = new google.maps.LatLng(49.148836, -122.912467);
+            var mapOptions = {
+                center: myCenter,
+                zoom: 13,
+                scrollwheel: false,
+                draggable: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+            });
+            marker.setMap(map);
+        }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9CZ3Tb6BhvmbIo66RJwtHUok9P4-eR3w&callback=myMap"></script>
+    <script src="../build/vrview.js"></script>
+    <script src="index.js"></script>
+    <footer>Copyright &copy; Van360hub.com</footer>
+</body>
+
+</html>

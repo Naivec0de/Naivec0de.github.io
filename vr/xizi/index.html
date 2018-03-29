@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111356487-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-111356487-1');
+
+    </script>
+    <title>西子 温哥华客栈</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        function is_weixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        var isWeixin = is_weixin();
+        var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+
+        function loadHtml() {
+            var div = document.createElement('div');
+            div.id = 'weixin-tip';
+            div.innerHTML = '<p><img src="r/wechat_browser.png" width="100%" height="100%"alt="微信打开"/></p>';
+            document.body.appendChild(div);
+        }
+
+        function loadStyleText(cssText) {
+            var style = document.createElement('style');
+            style.rel = 'stylesheet';
+            style.type = 'text/css';
+            try {
+                style.appendChild(document.createTextNode(cssText));
+            } catch (e) {
+                style.styleSheet.cssText = cssText; //ie9以下
+            }
+            var head = document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+            head.appendChild(style);
+        }
+        var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,1); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+        if (isWeixin) {
+            loadHtml();
+            loadStyleText(cssText);
+        }
+
+    </script>
+    <header>
+        <h1 style="padding-top: 50px;">西子 温哥华客栈</h1>
+    </header>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card">
+            <a href="../" class="w3-bar-item w3-button"><b></b>VAN360HUB</a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="#projects" class="w3-bar-item w3-button">Listings</a>
+                <a href="#about" class="w3-bar-item w3-button">About</a>
+                <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+            </div>
+        </div>
+    </div>
+    <div id="vrview"></div>
+    <div id="imageview"></div>
+    <p id="currently_viewing"></p>
+    <div id="info" class="container">
+        <div id="dp">
+            <img src="r/qrcode.jpg"></div>
+        <div id="descriptions" class="container">
+            <h3>西子 温哥华客栈</h3>
+            <p id="desc">位于列治文 Garden City Rd 夹 Capstan Way. 邻近超市，餐厅
+            </p>
+            <div id="demo" class="collapse">
+                <p id="more_desc">
+                    双房套间含有私人浴室 各自独立入口<br> 大床房步入式衣柜，特大卫生间
+                    <br>
+                    <i class="material-icons">free_breakfast</i>免费早餐<br>
+                    <i class="material-icons">wifi</i>免费无线网络<br>
+                    <i class="material-icons">smoke_free</i>禁烟客房<br>
+                    <i class="material-icons">kitchen</i>共用厨房<br>
+                    <i class="material-icons">local_airport</i>距离温哥华国际机场15分钟车程<br>
+                    <i class="material-icons">near_me</i>可步行8分钟至超市，餐厅<br> <br>
+                    <i class="fa fa-wechat"></i> 微信：xizi1912 或扫描二维码
+                </p>
+            </div>
+
+        </div>
+        <input id="btnToggle" type="button" data-toggle="collapse" data-target="#demo" onclick="toggle()" />
+    </div>
+
+    <div>
+        <p id=c_title>360全景</p>
+        <ul class="carousel">
+            <li>
+                <a href="#r2">
+                <img src="r/r2t.jpg" /> 
+                <small>双房套间-客房1</small>
+                    <small class="info">
+                        <i class="glyphicon glyphicon-bed"></i>双人床
+                        <i class="fa fa-bath"></i>套间内共用
+                    </small>
+                </a>
+
+            </li>
+            <li>
+                <a href="#r3">
+                <img src="r/r3t.jpg" /> 
+                <small>双房套间-客房2</small>
+                    <small class="info">
+                        <i class="glyphicon glyphicon-bed"></i>双人床
+                        <i class="fa fa-bath"></i>套间内共用
+                    </small>
+                </a>
+            </li>
+            <li>
+                <a href="#w">
+                <img src="r/wt.jpg" /> 
+                <small>双房套间-浴室</small>
+                <small>各房拥有独立入口</small>
+                </a>
+            </li>
+
+        </ul>
+        <ul class="carousel">
+            <li>
+                <a href="#r4">
+                <img src="r/r4t.jpg" /> 
+                <small>大床套间</small>
+                    <small class="info">
+                        <i class="glyphicon glyphicon-bed"></i>大双人床
+                        <i class="fa fa-bath"></i>私人浴室
+                    </small>
+                </a>
+            </li>
+            <li>
+                <a href="#r4b">
+                <img src="r/r4bt.jpg" /> 
+                <small>大床套间-浴室</small>
+                    <small class="info">
+                    </small>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <div>
+        <p id=c_title>图片</p>
+        <ul id="plain" class="carousel">
+            <li>
+                <a href="#dining">
+                <img src="r/d.jpg" /> 
+                <small>餐厅</small></a>
+            </li>
+            <li>
+                <a href="#kitchen">
+                <img src="r/k.jpg" /> 
+                <small>厨房</small></a>
+            </li>
+            <li>
+                <a href="#r2p">
+                <img src="r/r2t.jpg" /> 
+                <small>双房套间-客房2</small></a>
+            </li>
+            <li>
+                <a href="#wp1">
+                <img src="r/wt.jpg" /> 
+                <small>双房套间-浴室</small></a>
+            </li>
+            <li>
+                <a href="#fp1">
+                <img src="r/r23f.png" /> 
+                <small>双房套间-平面</small></a>
+            </li>
+            <li>
+                <a href="#fp2">
+                <img src="r/r4f.png" /> 
+                <small>大床套间-平面</small></a>
+            </li>
+        </ul>
+    </div>
+    <!-- Google Map -->
+    <div id="googleMap" class="w3-grayscale" style="width:100%;height:450px;"></div>
+    <!-- Add Google Maps -->
+    <script>
+        function myMap() {
+            myCenter = new google.maps.LatLng(49.188402, -123.1201358);
+            var mapOptions = {
+                center: myCenter,
+                zoom: 13,
+                scrollwheel: false,
+                draggable: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+            });
+            marker.setMap(map);
+        }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9CZ3Tb6BhvmbIo66RJwtHUok9P4-eR3w&callback=myMap"></script>
+    <script src="../build/vrview.js"></script>
+    <script src="index.js"></script>
+    <footer>Copyright &copy; Van360hub.com</footer>
+</body>
+
+</html>
