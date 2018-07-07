@@ -21,74 +21,74 @@ var scenes = {
     },
     r2: {
         image: 'r/r2.jpg',
-        preview: 'r/preload_2.jpg'
+        preview: 'r/preload_10.jpg'
     },
 
     r21: {
         image: 'r/r2_1.jpg',
-        preview: 'r/preload_3.jpg'
+        preview: 'r/preload_10.jpg'
     },
 
     r3: {
         image: 'r/r3.jpg',
-        preview: 'r/preload_4.jpg'
+        preview: 'r/preload_11.jpg'
     },
     r4: {
         image: 'r/r4.jpg',
-        preview: 'r/preload_5.jpg'
+        preview: 'r/preload_12.jpg'
 
     },
     r5: {
         image: 'r/r5.jpg',
-        preview: 'r/preload_6.jpg'
+        preview: 'r/preload_13.jpg'
     },
     r6: {
         image: 'r/r6.jpg',
-        preview: 'r/preload_7.jpg'
+        preview: 'r/preload_14.jpg'
     },
     r7: {
         image: 'r/r7.jpg',
-        preview: 'r/preload_8.jpg'
+        preview: 'r/preload_15.jpg'
     },
     r71: {
         image: 'r/r7_1.jpg',
-        preview: 'r/preload_9.jpg'
+        preview: 'r/preload_16.jpg'
     },
     r8: {
         image: 'r/r8.jpg',
-        preview: 'r/preload_10.jpg'
+        preview: 'r/preload_17.jpg'
     },
     r9: {
         image: 'r/r9.jpg',
-        preview: 'r/preload_11.jpg'
+        preview: 'r/preload_18.jpg'
     },
     r10: {
         image: 'r/r10.jpg',
-        preview: 'r/preload_12.jpg'
+        preview: 'r/preload_2.jpg'
     },
     r11: {
         image: 'r/r11.jpg',
-        preview: 'r/preload_13.jpg'
+        preview: 'r/preload_3.jpg'
     },
     r12: {
         image: 'r/r12.jpg',
-        preview: 'r/preload_14.jpg'
+        preview: 'r/preload_4.jpg'
     },
     r13: {
         image: 'r/r13.jpg',
-        preview: 'r/preload_15.jpg'
+        preview: 'r/preload_5.jpg'
     },
     r14: {
         image: 'r/r14.jpg',
-        preview: 'r/preload_16.jpg'
+        preview: 'r/preload_6.jpg'
     },
     r15: {
         image: 'r/r15.jpg',
-        preview: 'r/preload_17.jpg'
+        preview: 'r/preload_7.jpg'
     },
     r16: {
         image: 'r/r16.jpg',
-        preview: 'r/preload_18.jpg'
+        preview: 'r/preload_8.jpg'
     },
 
     p1: {
