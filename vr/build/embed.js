@@ -8312,7 +8312,7 @@ FusionPoseSensor.prototype.updateDeviceMotion_ = function(deviceMotion) {
   // With iOS and Firefox Android, rotationRate is reported in degrees,
   // so we first convert to radians.
   if (this.isIOS || this.isFirefoxAndroid) {
-    this.gyroscope.multiplyScalar(Math.PI / 180);
+   // this.gyroscope.multiplyScalar(Math.PI / 180);
   }
 
   this.filter.addAccelMeasurement(this.accelerometer, timestampS);
