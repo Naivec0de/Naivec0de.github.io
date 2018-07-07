@@ -1,0 +1,372 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: darkgrey;
+}
+
+
+* {
+    font-size: 100%;
+    font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding-top: 20px;
+}
+
+
+iframe {
+    display: block;
+    border: none;
+    margin: 10px auto;
+    margin-bottom: 0;
+    padding: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#c_title {
+    text-align: center;
+}
+
+.material-icons {
+    vertical-align: middle;
+}
+
+ul.carousel {
+    display: flex;
+    width: 60vw;
+    margin: 10px auto;
+    padding: 10px;
+    justify-content: flex-start;
+    overflow: auto;
+}
+
+ul.carousel li a {
+    background-color: whitesmoke;
+    height: 240px;
+    width: 248px;
+    display: inline-block;
+    text-align: left;
+    color: #999;
+    text-decoration: none;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+ul.carousel li {
+    list-style: none;
+    display: inline-block;
+}
+
+/*Item seleted*/
+
+ul.carousel li a.current {
+    color: blue;
+    border: 5px solid gray;
+}
+
+ul.carousel li a img {
+    width: 100%;
+    height: 160px;
+}
+
+
+ul.carousel li a small {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: black;
+    height: 30px;
+    padding-top: 2px;
+}
+
+
+
+#element::-webkit-scrollbar {
+    display: none;
+}
+
+#controls {
+    overflow: hidden;
+    background: #eee;
+    margin: 0 auto;
+}
+
+#controls > * {
+    margin: 8px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#controls > *:hover {
+    opacity: 1;
+}
+
+#imageview {
+    display: none;
+    border: none;
+    width: 60vw;
+    height: 33vw;
+    margin: 10px auto;
+    margin-bottom: 0;
+    padding: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#imageview img {
+    width: 100%;
+    height: inherit;
+
+}
+
+#toggleplay {
+    float: left;
+    background: url('img/ic_pause_black_24dp.svg');
+    width: 24px;
+    height: 24px;
+}
+
+#toggleplay.paused {
+    background: url('img/ic_play_arrow_black_24dp.svg');
+}
+
+#time {
+    float: left;
+    height: 19px;
+    padding-top: 5px;
+}
+
+#togglemute {
+    float: right;
+    background: url('img/ic_volume_up_black_24dp.svg');
+    width: 24px;
+    height: 24px;
+}
+
+#togglemute.muted {
+    background: url('img/ic_volume_off_black_24dp.svg');
+}
+
+#volumerange {
+    float: right;
+    width: 100px;
+    height: 24px;
+}
+
+#btnToggle {
+
+    background-image: url('r/ic_expand.png');
+    height: 25px;
+    width: 100%;
+    outline: none;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+}
+
+#btnToggle.expand {
+
+    background-image: url('r/ic_expand.png');
+    height: 25px;
+    outline: none;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+
+
+}
+
+#btnToggle.collapse {
+    background-image: url('r/ic_expand_less.png');
+    height: 25px;
+    outline: none;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+
+}
+
+#info {
+    width: 60vw;
+    border-bottom: 2px solid grey;
+}
+
+#dp {
+    width: 10%;
+    float: left;
+}
+
+#dp img {
+    width: 90%;
+    vertical-align: middle;
+
+}
+
+#desc,
+#more_desc {
+    width: 100%;
+    text-align: left;
+}
+
+#descriptions {
+    width: 90%;
+    float: right;
+}
+
+#currently_viewing {
+    text-align: center;
+}
+
+#carousel_lable {
+    text-align: center;
+}
+
+header,
+footer {
+    padding: 1em;
+    color: white;
+    background-color: dimgray;
+    clear: left;
+    text-align: center;
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 700px) {
+    iframe {
+        width: 60vw;
+        height: 33vw;
+
+    }
+
+    h1,
+    h2,
+    p {
+        margin: 1rem auto;
+    }
+
+    #controls {
+        width: 700px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+    ul.carousel {
+        width: 100%;
+        display: block;
+    }
+    ul.carousel li {
+        list-style: none;
+        margin: 0;
+        padding: 0 10px;
+        display: block;
+        width: 100%;
+    }
+    ul.carousel li a {
+        display: flex;
+        text-align: left;
+        width: 100%;
+        height: 95px;
+        text-decoration: none;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+
+    ul.carousel li a small {
+        display: inline-block;
+        text-align: left;
+        vertical-align: top;
+        color: black;
+        width: 90%;
+        height: 80px;
+        margin-left: 5px;
+
+    }
+    ul.carousel li a img {
+        width: 124px;
+        height: 80px;
+
+    }
+    ul.carousel li a.current {
+        color: blue;
+        border: 3px solid gray;
+        border-style: outset;
+
+    }
+    iframe {
+        width: 100%;
+        height: 55vw;
+    }
+
+    #imageview {
+        width: 100%;
+        height: 55vw;
+
+    }
+    #btnToggle {
+        height: 25px;
+        width: 100%;
+        background-image: url('r/ic_expand.png');
+        outline: none;
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: none;
+        background-position: center;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    #desc,
+    #more_desc {
+        width: 100%;
+        text-align: left;
+    }
+    #info {
+        width: 90%
+    }
+    #dp {
+        width: 20%;
+        float: left;
+    }
+    #dp img {
+        width: 100%;
+        vertical-align: top;
+
+    }
+    #descriptions {
+        width: 80%;
+        padding-left: 5px;
+        padding-right: 5px;
+        float: right;
+    }
+}
