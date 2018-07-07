@@ -8615,7 +8615,7 @@ Util.isSafari = (function() {
 })();
 
 Util.isFirefoxAndroid = (function() {
-  var isFirefoxAndroid = navigator.userAgent.indexOf('Firefox') !== -1 &&
+  var isFirefoxAndroid =// navigator.userAgent.indexOf('Firefox') !== -1 &&
       navigator.userAgent.indexOf('Android') !== -1;
   return function() {
     return isFirefoxAndroid;
