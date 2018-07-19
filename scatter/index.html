@@ -22,11 +22,11 @@
 	<ol ng-show="letter">
 		<div ng-repeat="entry in getList()">
 			<li>{{entry}} <br> 
-			<input class="form-control" type="text" placeholder="{{letter}}:" ng-disabled="countDown <= 0" /> </li>
+			<input class="form-control" type="text" autocomplete="off" placeholder="{{letter}}:" ng-disabled="countDown <= 0" /> </li>
 		</div>
 	</ol>
 	
-	<input class="form-control" type="text" ng-model="seed_text" placeholder="Smash some random digits here" ng-show="countDown == 0" />
+	<input class="form-control" autocomplete="off" type="text" ng-model="seed_text" placeholder="Smash some random digits here" ng-show="countDown == 0" />
 	<input type="button" value="Start!" ng-click='gen(seed_text)' ng-show="seed_text && countDown == 0" ></input>
 </div>
 
