@@ -22,16 +22,42 @@ angular.module('app', []).controller("dictCtrl", function ($scope, $interval) {
 		$scope.countDown = totalTime;
 	}
 
-	// seeded pseudo random using sine:
-	let seed = 735632791;
-	function rnd(entropy) {
-		seed += entropy ? entropy.trim().toUpperCase().split('').map(l => l.charCodeAt(0)).reduce((accum, i) => accum * 31 + i, 7) : 32452843;
-		seed %= 982451653;
-		let x = Math.sin(seed) * 10000;
-		x -= Math.floor(x);
-		console.log('=> rnd = ' + x);
-		return x;
-	}
+	let rnd = function () {
+		let seed = 735632791; // co-prime with p and q
+		const pq = 31883349249899480; // p = 982451653, q = 32452843
+		return function (entropy) {
+			if (entropy) {
+				seed += entropy.trim().toUpperCase().split('').map(
+					letter => letter.charCodeAt(0)).reduce(
+						(accum, keycode) => accum * 31 + keycode, 7);
+			}
+			seed = (seed * seed) % pq;
+			let x = seed / pq;
+			return x;
+		}
+	}();
+
+	(function () {
+		console.log("Testing rnd...");
+		let bins = new Map();
+		[...Array(1000000).keys()].forEach(() => {
+			let r = rnd();
+			if (Math.floor(r) == 1) {
+				console.log('found 1');
+			}
+			let k = Math.floor(r * 100);
+			if (bins[k]) {
+				bins[k] += 1;
+			} else {
+				bins[k] = 1;
+			}
+		});
+
+		console.log('bins = %o', bins);
+
+	}); // ();
+
+
 
 
 	let getWord = function () {
