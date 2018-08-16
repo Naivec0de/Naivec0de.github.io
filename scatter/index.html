@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
 	<title>Random words</title>
 	<meta charset="utf-8">
@@ -12,25 +13,25 @@
 
 <body>
 
-<div class="well" ng-app="app" ng-controller="dictCtrl">
+	<div class="well" ng-app="app" ng-controller="dictCtrl">
 
-	<p ng-show="letter"> Letter: {{letter}} - Timer: {{countDown}} </p>
-	
+		<p ng-show="letter"> Letter: {{letter}} - Timer: {{countDown}} </p>
 
-	
-	
-	<ol ng-show="letter">
-		<div ng-repeat="entry in getList()">
-			<li>{{entry}} <br> 
-			<input class="form-control" type="text" autocomplete="off" placeholder="{{letter}}:" ng-disabled="countDown <= 0" /> </li>
-		</div>
-	</ol>
-	
-	<input class="form-control" autocomplete="off" type="text" ng-model="seed_text" placeholder="Smash some random digits here" ng-show="countDown == 0" />
-	<input type="button" value="Start!" ng-click='gen(seed_text)' ng-show="seed_text && countDown == 0" ></input>
-</div>
+		<ol ng-show="letter">
+			<div ng-repeat="entry in getList()">
+				<li>{{entry}}
+					<br>
+					<input class="form-control" type="text" autocomplete="off" placeholder="{{letter}}:" ng-disabled="countDown <= 0" /> </li>
+			</div>
+		</ol>
 
-<script src="controller.js"></script>
+		<input class="form-control" autocomplete="off" type="text" ng-model="seed_text" placeholder="Smash some random stuff here"
+		 ng-show="countDown == 0" />
+		<input type="button" value="New Game" ng-click='gen(seed_text)' ng-show="seed_text && countDown == 0"></input>
+	</div>
+
+	<script src="controller.js"></script>
 
 </body>
+
 </html>
