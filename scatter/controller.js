@@ -4,18 +4,12 @@ angular.module('app', []).controller("dictCtrl", function ($scope, $interval) {
 	$scope.letter = ''; // random letter
 	$scope.countDown = 0; // count down timer
 
-	// timer:
 	const totalTime = 120;
-	$interval(function () {
-		if ($scope.countDown > 0) {
-			$scope.countDown--;
-		}
-	}, 1000, 0);
-
+	$interval(() => { $scope.countDown > 0 ? $scope.countDown-- : 0 }, 1000, 0);
 
 	$scope.getTimerDisplay = function () {
 		if ($scope.countDown > 0) {
-			return 'Time: ' + '░'.repeat($scope.countDown / 5 + 1) + ' ' + $scope.countDown;
+			return 'Time: ' + '░'.repeat($scope.countDown / 10 + 1) + ' ' + $scope.countDown;
 		}
 		return "Time's up! Compare your answers with friends.";
 	}
@@ -23,9 +17,7 @@ angular.module('app', []).controller("dictCtrl", function ($scope, $interval) {
 	// generate list list index and random letter:
 	$scope.gen = function (entropy) {
 		rnd(entropy);
-		let ascii = Math.floor(rnd() * 26);
-		$scope.letter = String.fromCharCode(65 + ascii);
-
+		$scope.letter = getLetter($scope.letter);
 		$scope.word_list = [...Array(12).keys()].map(getWord);
 		$scope.countDown = totalTime;
 	}
@@ -65,8 +57,16 @@ angular.module('app', []).controller("dictCtrl", function ($scope, $interval) {
 
 	}); // ();
 
-
-
+	function getLetter(avoid) {
+		const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G',
+			'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'W'];
+		let candidate = avoid;
+		while (candidate == avoid) {
+			console.log('avoiding ' + avoid);
+			candidate = letters[Math.floor(rnd() * letters.length)];
+		}
+		return candidate;
+	}
 
 	let getWord = function () {
 		let list = [];
