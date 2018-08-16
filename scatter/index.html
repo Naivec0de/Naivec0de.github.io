@@ -15,10 +15,10 @@
 
 	<div class="well" ng-app="app" ng-controller="dictCtrl">
 
-		<p ng-show="letter"> Letter: {{letter}} - Timer: {{countDown}} </p>
-
-		<ol ng-show="letter">
-			<div ng-repeat="entry in getList()">
+		<p ng-if="letter"> Think of words that starts with: <b>{{letter}}</b> </p>
+		<p ng-if="letter">Timer: {{countDown}} </p>
+		<ol ng-if="letter">
+			<div ng-repeat="entry in word_list">
 				<li>{{entry}}
 					<br>
 					<input class="form-control" type="text" autocomplete="off" placeholder="{{letter}}:" ng-disabled="countDown <= 0" /> </li>
