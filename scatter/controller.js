@@ -5,12 +5,20 @@ angular.module('app', []).controller("dictCtrl", function ($scope, $interval) {
 	$scope.countDown = 0; // count down timer
 
 	// timer:
-	const totalTime = 1;
+	const totalTime = 120;
 	$interval(function () {
 		if ($scope.countDown > 0) {
 			$scope.countDown--;
 		}
 	}, 1000, 0);
+
+
+	$scope.getTimerDisplay = function () {
+		if ($scope.countDown > 0) {
+			return 'Time: ' + '░'.repeat($scope.countDown / 5 + 1) + ' ' + $scope.countDown;
+		}
+		return "Time's up! Compare your answers with friends.";
+	}
 
 	// generate list list index and random letter:
 	$scope.gen = function (entropy) {

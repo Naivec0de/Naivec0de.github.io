@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh">
+<html>
 
 <head>
 	<title>Random words</title>
@@ -16,12 +15,12 @@
 	<div class="well" ng-app="app" ng-controller="dictCtrl">
 
 		<p ng-if="letter"> Think of words that starts with: <b>{{letter}}</b> </p>
-		<p ng-if="letter">Timer: {{countDown}} </p>
+		<p ng-if="letter"> {{getTimerDisplay()}} </p>
 		<ol ng-if="letter">
 			<div ng-repeat="entry in word_list">
 				<li>{{entry}}
 					<br>
-					<input class="form-control" type="text" autocomplete="off" placeholder="{{letter}}:" ng-disabled="countDown <= 0" /> </li>
+					<input class="form-control" type="text" autocomplete="off" placeholder="{{letter}}" ng-disabled="countDown <= 0" /> </li>
 			</div>
 		</ol>
 
