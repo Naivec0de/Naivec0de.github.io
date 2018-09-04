@@ -82,6 +82,18 @@ var APP_DATA = {
           "pitch": 0.4255624086065257,
           "rotation": 0,
           "target": "3-"
+        },
+        {
+          "yaw": 0.06630382543868407,
+          "pitch": 0.018466465439267665,
+          "rotation": 0,
+          "target": "6-"
+        },
+        {
+          "yaw": 0.39851110729314065,
+          "pitch": -0.05354942582166444,
+          "rotation": 0,
+          "target": "7-"
         }
       ],
       "infoHotspots": []
@@ -170,8 +182,8 @@ var APP_DATA = {
           "target": "4-"
         },
         {
-          "yaw": 1.6827816073669055,
-          "pitch": -0.06618391237534915,
+          "yaw": 1.6648019863311365,
+          "pitch": -0.04610696511880619,
           "rotation": 0,
           "target": "7-"
         },
@@ -274,10 +286,16 @@ var APP_DATA = {
           "target": "6-"
         },
         {
-          "yaw": 2.6552251089552454,
-          "pitch": 0.25282007852588606,
+          "yaw": 2.8303776080532916,
+          "pitch": 0.4090913504718614,
           "rotation": 0,
           "target": "3-"
+        },
+        {
+          "yaw": 2.4930741674395076,
+          "pitch": -0.033793285848570775,
+          "rotation": 0,
+          "target": "7-"
         }
       ],
       "infoHotspots": []
@@ -351,7 +369,7 @@ var APP_DATA = {
           "yaw": -0.7991120944895975,
           "pitch": 0.3790886442631525,
           "rotation": 0,
-          "target": "9-"
+          "target": "8-"
         },
         {
           "yaw": 1.1230093657367597,
@@ -363,19 +381,19 @@ var APP_DATA = {
           "yaw": 2.81939007219343,
           "pitch": 0.14460000223650837,
           "rotation": 0,
-          "target": "11-"
+          "target": "13-"
         },
         {
           "yaw": 2.055973083264428,
           "pitch": 0.36907393413522627,
           "rotation": 0,
-          "target": "12-"
+          "target": "11-"
         },
         {
           "yaw": -2.039001242505348,
           "pitch": 0.330055376330618,
           "rotation": 0,
-          "target": "13-"
+          "target": "12-"
         },
         {
           "yaw": -2.9620835388298232,
@@ -388,46 +406,6 @@ var APP_DATA = {
     },
     {
       "id": "8-",
-      "name": "主厕",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        }
-      ],
-      "faceSize": 1024,
-      "initialViewParameters": {
-        "yaw": -1.274155733243731,
-        "pitch": 0.19369528266674862,
-        "fov": 1.5539640042773482
-      },
-      "linkHotspots": [
-        {
-          "yaw": -0.9918045804731879,
-          "pitch": 0.3788707150321109,
-          "rotation": 0,
-          "target": "9-"
-        },
-        {
-          "yaw": 2.7877830188271835,
-          "pitch": 0.19761714953178,
-          "rotation": 0,
-          "target": "10-"
-        }
-      ],
-      "infoHotspots": []
-    },
-    {
-      "id": "9-",
       "name": "主卧",
       "levels": [
         {
@@ -461,7 +439,47 @@ var APP_DATA = {
           "yaw": 0.06882465484473776,
           "pitch": 0.3765879153015952,
           "rotation": 0,
+          "target": "9-"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
+      "id": "9-",
+      "name": "主厕",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        }
+      ],
+      "faceSize": 1024,
+      "initialViewParameters": {
+        "yaw": -1.274155733243731,
+        "pitch": 0.19369528266674862,
+        "fov": 1.5539640042773482
+      },
+      "linkHotspots": [
+        {
+          "yaw": -0.9918045804731879,
+          "pitch": 0.3788707150321109,
+          "rotation": 0,
           "target": "8-"
+        },
+        {
+          "yaw": 2.7877830188271835,
+          "pitch": 0.19761714953178,
+          "rotation": 0,
+          "target": "10-"
         }
       ],
       "infoHotspots": []
@@ -502,40 +520,6 @@ var APP_DATA = {
     },
     {
       "id": "11-",
-      "name": "天台",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        }
-      ],
-      "faceSize": 1024,
-      "initialViewParameters": {
-        "yaw": 1.0273312281974114,
-        "pitch": 0.2636703464892527,
-        "fov": 1.5539640042773482
-      },
-      "linkHotspots": [
-        {
-          "yaw": -2.994783092862445,
-          "pitch": 0.6221213606444671,
-          "rotation": 0,
-          "target": "7-"
-        }
-      ],
-      "infoHotspots": []
-    },
-    {
-      "id": "12-",
       "name": "次卧",
       "levels": [
         {
@@ -569,7 +553,7 @@ var APP_DATA = {
       "infoHotspots": []
     },
     {
-      "id": "13-",
+      "id": "12-",
       "name": "客卧",
       "levels": [
         {
@@ -596,6 +580,40 @@ var APP_DATA = {
         {
           "yaw": 1.9647248922887117,
           "pitch": 0.3071371629209487,
+          "rotation": 0,
+          "target": "7-"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
+      "id": "13-",
+      "name": "天台",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        }
+      ],
+      "faceSize": 1024,
+      "initialViewParameters": {
+        "yaw": 1.0273312281974114,
+        "pitch": 0.2636703464892527,
+        "fov": 1.5539640042773482
+      },
+      "linkHotspots": [
+        {
+          "yaw": -2.994783092862445,
+          "pitch": 0.6221213606444671,
           "rotation": 0,
           "target": "7-"
         }
