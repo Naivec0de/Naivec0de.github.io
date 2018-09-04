@@ -1,8 +1,116 @@
 var APP_DATA = {
   "scenes": [
     {
-      "id": "0-01",
-      "name": "01",
+      "id": "0-",
+      "name": "院子",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        }
+      ],
+      "faceSize": 1024,
+      "initialViewParameters": {
+        "yaw": -2.8083993902574615,
+        "pitch": -0.014603158417212825,
+        "fov": 1.6968870080798208
+      },
+      "linkHotspots": [
+        {
+          "yaw": -2.9053337482513086,
+          "pitch": 0.27633285346954395,
+          "rotation": 0,
+          "target": "1-"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
+      "id": "1-",
+      "name": "大门",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        }
+      ],
+      "faceSize": 1024,
+      "initialViewParameters": {
+        "yaw": -0.261839466024572,
+        "pitch": 0.0889756829925119,
+        "fov": 1.6968870080798208
+      },
+      "linkHotspots": [
+        {
+          "yaw": 2.7868746104890585,
+          "pitch": 0.9335432203532399,
+          "rotation": 0,
+          "target": "0-"
+        },
+        {
+          "yaw": -0.03303120049338659,
+          "pitch": 0.5101588241937947,
+          "rotation": 0,
+          "target": "2-"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
+      "id": "2-",
+      "name": "走廊",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        }
+      ],
+      "faceSize": 1024,
+      "initialViewParameters": {
+        "pitch": 0,
+        "yaw": 0,
+        "fov": 1.5707963267948966
+      },
+      "linkHotspots": [
+        {
+          "yaw": -2.6519695906443275,
+          "pitch": 0.5979599902725283,
+          "rotation": 0,
+          "target": "1-"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
+      "id": "3-",
+      "name": "客厅",
       "levels": [
         {
           "tileSize": 256,
@@ -35,87 +143,6 @@ var APP_DATA = {
       ]
     },
     {
-      "id": "1-02",
-      "name": "02",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        }
-      ],
-      "faceSize": 1024,
-      "initialViewParameters": {
-        "pitch": 0,
-        "yaw": 0,
-        "fov": 1.5707963267948966
-      },
-      "linkHotspots": [],
-      "infoHotspots": []
-    },
-    {
-      "id": "2-03",
-      "name": "03",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        }
-      ],
-      "faceSize": 1024,
-      "initialViewParameters": {
-        "yaw": 1.826243540051328,
-        "pitch": 0.6946925594656186,
-        "fov": 1.6968870080798208
-      },
-      "linkHotspots": [],
-      "infoHotspots": []
-    },
-    {
-      "id": "3-04",
-      "name": "04",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        }
-      ],
-      "faceSize": 1024,
-      "initialViewParameters": {
-        "yaw": -1.3289539813826075,
-        "pitch": -0.05569853738671071,
-        "fov": 1.6968870080798208
-      },
-      "linkHotspots": [],
-      "infoHotspots": []
-    },
-    {
       "id": "4-05",
       "name": "05",
       "levels": [
@@ -135,8 +162,8 @@ var APP_DATA = {
       ],
       "faceSize": 1024,
       "initialViewParameters": {
-        "yaw": -1.400437936711807,
-        "pitch": 0.03284717140950022,
+        "yaw": 1.826243540051328,
+        "pitch": 0.6946925594656186,
         "fov": 1.6968870080798208
       },
       "linkHotspots": [],
@@ -345,8 +372,8 @@ var APP_DATA = {
       "infoHotspots": []
     },
     {
-      "id": "12-13",
-      "name": "13",
+      "id": "12-04",
+      "name": "04",
       "levels": [
         {
           "tileSize": 256,
@@ -364,8 +391,8 @@ var APP_DATA = {
       ],
       "faceSize": 1024,
       "initialViewParameters": {
-        "yaw": -1.7587132514451085,
-        "pitch": 0.40892460786894347,
+        "yaw": -1.3289539813826075,
+        "pitch": -0.05569853738671071,
         "fov": 1.6968870080798208
       },
       "linkHotspots": [],
@@ -418,8 +445,8 @@ var APP_DATA = {
       ],
       "faceSize": 1024,
       "initialViewParameters": {
-        "yaw": -3.0665740327232776,
-        "pitch": -0.09346021387014325,
+        "yaw": -1.7587132514451085,
+        "pitch": 0.40892460786894347,
         "fov": 1.6968870080798208
       },
       "linkHotspots": [],
